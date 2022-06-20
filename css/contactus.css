@@ -1,0 +1,284 @@
+*{
+  margin:0px;
+  padding: 0%;
+}
+
+body{
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.4)50%,rgb(0,0,0,0.4)),url(../img/front1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed ;
+  padding: 0;
+  font-size: small;
+}
+.nav{
+  color: white;
+    width: 100%;
+    margin: auto;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    position: sticky;
+    top:0;
+    z-index: 1;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.75),rgba(0,0,0,0.75), rgba(0,0,0,0.75),transparent) ;
+}
+.logo img{
+  height: 80px;
+  width: 180px;
+  margin: 20px;
+  margin-top: 20px;
+}
+.nav ul li::after{
+  content:'';
+  height: 3px;
+  width: 0%;
+  background: #ff7200;
+  position: absolute;
+  left: 0;
+  transform: translate(-50% -50%);
+  bottom: -5px;
+  transition: 0.5s;
+}
+.nav ul li:hover::after{
+  width: 100%;
+}
+.nav ul li:active::after{
+  width: 100%;
+}
+.logo{
+  width: 120px;
+  cursor:pointer;
+}
+.nav ul{
+  color: #fff;
+  padding: 20px;
+}
+.nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin:0px 30px;
+  
+  position: relative;
+  font-size: 20px;
+  font-family: 'Times New Roman';
+}
+.nav ul li a{
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s ease-in-out ;
+}
+.nav ul li a:hover{
+  color: #ff7200;
+}
+.nav ul li:active::after {
+  width: 100%;
+}
+#contact{
+  color: #ff7200;
+  
+} 
+#contact::before{
+  content:'';
+  height: 3px;
+  width: 100%;
+  background: #ff7200;
+  position: absolute;
+  left: 0;
+  transform: translate(-50% -50%);
+  bottom: -5px;
+  transition: 0.5s;
+}
+.both{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    margin: 50px 0px;
+}
+.des {
+  width: 70%;
+  padding: 30px;
+  top: 50%;
+  left: 50%;
+  text-align: left;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 20px;
+}
+.des h1{
+  color: #ff7200;
+  text-align: left;
+  text-transform: capitalize;
+  margin: 20px;
+}
+.des a{
+  color: #ff7200;
+  text-decoration: none;
+}
+.field{
+  width: 70%;
+  padding: 30px;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 20px;
+}
+
+fieldset {
+  border: solid 5px #ff7200;
+  border-radius: 30px;
+  padding: 30px 0;
+}
+
+legend {
+  color: #ff7200;
+  text-align: left;
+  margin-left: 30px;
+  font-size: 30px;
+}
+fieldset input{
+  width: 300px;
+  height: 22px;
+  color: #ff7200;
+  background-color: rgba(0,0,0,0.5);
+  border: #ff7200 1px solid;
+  border-top: none;
+  border-radius:20px;
+  padding: 10px;
+}
+
+.tel {
+  width: 90%;
+  margin: 0 300;
+  margin-bottom: -5px;
+  margin-left: 40px;
+ display: flex;
+}
+
+fieldset .tel input {
+  width: 300px;
+  height: 30px;
+  display: flex;
+  margin-left: 30px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+fieldset .tel select {
+  width: 70px;
+  height: 35px;
+  display: flex;
+  margin-left: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: .25rem .25rem #ff7200;
+}
+fieldset textarea {
+  width: 400px;
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid #ff7200;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ff7200;
+  border-radius: 10px;
+  box-shadow: .4rem .4rem #ff7200;
+
+}
+fieldset label{
+  color: #ff7200;
+  font-style: 30px;
+  text-transform: capitalize;
+}
+fieldset select {
+  appearance: none;
+  width: 150px;
+  height: 22px;
+  margin-bottom: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 8px 10px;
+  color: #ff7200;
+  border-radius: 10px;
+  border: 2px solid #ff7200;
+  box-shadow: .25rem .25rem #ff7200;
+
+}
+fieldset button {
+  width: 200px;
+  height: 50px;
+  text-transform: uppercase;
+  border-radius: 30px;
+  border: 2px solid #ff7200;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: transparent;
+  text-align: center;
+  color: #ff7200;
+  box-shadow: .35rem .25rem .25rem #ff7200;
+  transition: .4s ease-in-out;
+}
+fieldset button:hover{
+  color: #fff;
+  background: #ff7200;
+  box-shadow: none;
+  
+}
+.footer{
+  background:linear-gradient(to bottom, rgba(0,0,0,0.7),rgba(0,0,0,1));
+  height: 250px;
+}
+.footer .table {
+  margin-left: 300px;
+  padding: 10px;
+}
+.footer .table tr {
+  margin-left: 40px;
+}
+.footer .table tr td{
+  font-size: 17px;
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 20px;
+}
+.footer h3{
+  
+  margin:0 60px;
+}
+.footer a{
+  color: #ff7200;
+  text-decoration: none;
+  width: 100px;
+  transition: 0.4s ease-in-out;
+  border-radius: 30px;
+}
+.footer .table a:hover{
+  border: 2px solid #ff7200;
+  border-radius: 30px;
+  padding: 5px 20px;
+  color: #fff;
+  background: #ff7200;   
+}
+.footer p{
+  color: #ff7200;
+  font-size: medium;
+  text-align: right;
+  margin-right: 20px;
+}
+.icons{
+  margin-left: 550px;
+  align-items: center;
+  justify-content: center;
+
+}
+.icons img{
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}

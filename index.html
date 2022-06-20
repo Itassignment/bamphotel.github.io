@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAMP hotel</title>
+    <script src="https://kit.fontawesome.com/3b37c998f8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="logo"><img src="./img/logo.png" alt=""></div>
+        <ul>
+            <li><a href="index.html" id="index">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="gym.html">Gym</a></li>
+            <li><a href="room.html">Room</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contactus.html">Contact us</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><label for="show" class="show-btn"><i class="fa fa-user"></i></label></li>
+        </ul>
+    </div>
+    <div class="both">
+    <div class="content">
+        <h1>Make your stay bright</h1>
+        <p>Find your stay Here at BAMP Hotel, we embrace our guests with comfort and value,
+            enhancing each stay <br>through 
+            the uniqueness of our hotel, restaurant, bar, club and buy or
+            <br>order with good price</p>
+        <div>
+            <button type="button"><a href="gallery.html">Watch More</a></button>
+            <button type="button"><a href="contactus.html">Contact Us</a></button>
+        </div>
+    </div>
+    <div class="pictures">
+        <div class="row1">
+           <img class="seventy" src="./img/room8.jpg" alt="">
+           <img class="thirty" src="./img/download.jfif" alt="">
+          
+        </div>
+        <div class="row2">
+            <img class="thirty" src="./img/lobby6.jpg" alt="">
+            <img class="seventy" src="./img/restaurant.jfif" alt="">
+            
+        </div>
+        <div class="row3">
+            <img class="seventy" src="./img/front.jpg" alt="">
+            <img class="thirty" src="./img/pool.jfif" alt="">
+        </div>
+    </div>
+    </div>
+    <br><br><br><br><br>
+    <div class="footer">
+        <table class="table">
+            <tr>
+                <td><h3><a href="index.html">Home</a></h3></td>
+                <td><h3><a href="gallery.html">Gallery</a></h3></td>
+                <td><h3><a href="gym.html">Gym</a></h3></td>
+            </tr>
+            <tr>
+                <td><h3><a href="room.html">Room</a></h3></td>
+                <td><h3><a href="faq.html"> FAQ</a></h3></td>
+                <td><h3><a href="contactus.html">Contact Us</a> </h3></td>
+            </tr>
+        </table>
+        <table class="icons" >
+            <tr>
+                <td><a href="https://insatgram.com" target="_blank"> <img src="./img/instagram.jpeg" alt=""></a></td>
+                <td><a href="https://youtube.com" target="_blank"> <img src="./img/youtube.png" alt=""></a></td>
+                <td><a href="https://telegram.me" target="_blank"> <img src="./img/telegram.jpeg" alt=""></a></td>
+                <td><a href="https://twitter.com" target="_blank"> <img src="./img/twitter.jpeg" alt=""></a></td>
+            </tr>
+        </table>
+        <hr color="#ff7200">
+        <br>
+        <p> ©2022. <b>BAMP_HOTEL</b> | Website Design <sub>by</sub> BAMPs</p><br>
+    </div>
+    <div class="center">
+        <input type="checkbox" name="log" id="show">
+        <input type="radio" name="log" id="show1">
+        <input type="radio" name="log" id="show2">
+       
+        <div class="container">
+          <label for="show" class="close-btn" title="close">x</label>
+          <div class="text">
+            Login 
+          </div>
+          <form action="#" id="form1">
+            <div class="data">
+              <label>Email or Phone</label> <input type="email" required>
+            </div>
+            <div class="data">
+              <label>Password</label> <input type="password" required>
+            </div>
+            <div class="forgot-pass">
+              <a href="#">Forget Password</a>
+            </div> <br> 
+            <div class="btn">
+              <div class="inner"></div>
+              <button type="submit">Login</button>
+             
+            </div>
+             <label for="show1" class="show-btn1">Sign-Up</label>
+          </form>
+        </div>
+          <div class="container1">
+          <label for="show2" class="close-btn" title="close">x</label>
+          <div class="text">
+            Sign-Up
+          </div>
+          <form action="#" id="form2">
+             <div class="data">
+               <label>Full Name</label>
+               <input type="text" required>
+             </div>
+            <div class="data">
+              <label>Email</label> 
+              <input type="email" required>
+            </div>
+             <div class="data">
+               <label>Phone</label>
+               <input type="tel" required>
+             </div>
+            <div class="data">
+              <label>Password</label> 
+              <input type="password" required>
+            </div>
+            <br>
+            <div class="btn">
+              <div class="inner"></div>
+              <button type="submit">Sign-Up</button>
+             
+            </div>
+            <label for="show2" class="show-btn1" style="margin-left: 10px">login</label>
+            <div></div>
+          </form>
+        </div>
+      </div>
+      <script>var form1 = document.getElementById('form1')
+
+        form1.addEventListener('submit', function (event){
+          
+          alert("You have successfully logged in!");
+             
+        });
+        var form2 = document.getElementById('form2')
+
+        form2.addEventListener('submit', function (event){
+  
+        alert("You have successfully signed up!");
+     
+})
+
+        </script>
+</body>
+</html>

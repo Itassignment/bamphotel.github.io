@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5)50%,rgb(0,0,0,0.5)),url(../img/front1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed ;
+  padding: 0;
+  font-size: small;
+  scroll-behavior: smooth;
+}
+.nav{
+  color: white;
+  width: 100%;
+  margin: auto;
+  height: 85px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  position: sticky;
+  top:0;
+  z-index: 1;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.75),rgba(0,0,0,0.75), rgba(0,0,0,0.75),transparent) ;
+}
+.logo img{
+  height: 80px;
+  width: 180px;
+  margin: 20px;
+  margin-top: 20px;
+}
+.nav ul li::after{
+  content:'';
+  height: 3px;
+  width: 0%;
+  background: #ff7200;
+  position: absolute;
+  left: 0;
+  transform: translate(-50% -50%);
+  bottom: -5px;
+  transition: 0.5s;
+}
+.nav ul li:hover::after{
+  width: 100%;
+}
+.nav ul li:active::after{
+  width: 100%;
+}
+.logo{
+  width: 120px;
+  cursor:pointer;
+}
+.nav ul{
+  color: #fff;
+  padding: 20px;
+}
+.nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin:0px 30px;
+  
+  position: relative;
+  font-size: 20px;
+  font-family: 'Times New Roman';
+}
+.nav ul li a{
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s ease-in-out ;
+}
+.nav ul li a:hover{
+  color: #ff7200;
+}
+#faq{
+    color: #ff7200;
+    
+} 
+#faq::before{
+    content:'';
+    height: 3px;
+    width: 100%;
+    background: #ff7200;
+    position: absolute;
+    left: 0;
+    transform: translate(-50% -50%);
+    bottom: -5px;
+    transition: 0.5s;
+}
+h1 {
+  text-align: center;
+  color:  #ff7200;
+  margin: 2rem 0;
+  font-size: 3rem;
+  margin-top: 2rem;
+  position: relative;
+}
+h1::before{
+  content:'';
+  width: 50px;
+  height: 4px;
+  position: absolute;
+ background: linear-gradient(#ff7200 , #ff7200);
+  left:50%;
+  bottom: -15px;
+  transform: translateX(-50%);
+  animation:line 2s linear infinite;
+}
+@keyframes line{
+  0%{
+    width: 50px;
+  }
+  50%{
+    width:100px;
+  }
+  100%{
+     width:50px;
+  }
+}
+.accordion {
+  width: 90%;
+  max-width: 1000px;
+  margin: 3rem auto;
+  
+}
+.accordion-item {
+background: linear-gradient(#3c92d9 , rgba(26, 225, 89, 0.96));
+  color: #111;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+}
+.accordion-item-header {
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+}
+.accordion-item-header.active::after {
+  content: "\2212";
+}
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordion-item-body-content {
+  padding: 1rem;
+  line-height: 1.5rem;
+  border-top: 1px solid;
+  border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+  background: #3c4058e3;
+  border-radius: 5px;
+  position: relative
+}
+.accordion-item-body-content::before{
+  content: '';
+  width: .3rem;
+  height: 95%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: linear-gradient(#ff9d00ed , rgba(199, 249, 0, 0.746));
+border-radius: 20px;
+}
+
+@media(max-width:767px) {
+  html {
+    font-size: 14px;
+  }
+}
+.accordion-item-body-content p{
+  font-size: 1.2rem;
+  color: #fff;
+}.footer{
+  background:linear-gradient(to bottom, rgba(0,0,0,0.7),rgba(0,0,0,1));
+  height: 250px;
+}
+.footer .table {
+  margin-left: 300px;
+  padding: 10px;
+}
+.footer .table tr {
+  margin-left: 40px;
+}
+.footer .table tr td{
+  font-size: 17px;
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 20px;
+}
+.footer h3{
+  
+  margin:0 60px;
+}
+.footer a{
+  color: #ff7200;
+  text-decoration: none;
+  width: 100px;
+  transition: 0.4s ease-in-out;
+  border-radius: 30px;
+}
+.footer .table a:hover{
+  border: 2px solid #ff7200;
+  border-radius: 30px;
+  padding: 5px 20px;
+  color: #fff;
+  background: #ff7200;   
+}
+.footer p{
+  color: #ff7200;
+  font-size: medium;
+  text-align: right;
+  margin-right: 20px;
+}
+.icons{
+  margin-left: 550px;
+  align-items: center;
+  justify-content: center;
+
+}
+.icons img{
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}

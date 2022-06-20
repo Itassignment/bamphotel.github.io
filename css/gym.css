@@ -1,0 +1,510 @@
+
+body{
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5)50%,rgb(0,0,0,0.5)),url(../img/front1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed ;
+    padding: 0;
+    font-size: small;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+.nav{
+    color: white;
+    width: 100%;
+    margin: auto;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    position: sticky;
+    top:0;
+    z-index: 1;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.75),rgba(0,0,0,0.75), rgba(0,0,0,0.75),transparent) ;
+}
+.logo img{
+    height: 80px;
+    width: 180px;
+    margin: 20px;
+    margin-top: 20px;
+}
+.nav ul li::after{
+    content:'';
+    height: 3px;
+    width: 0%;
+    background: #ff7200;
+    position: absolute;
+    left: 0;
+    transform: translate(-50% -50%);
+    bottom: -5px;
+    transition: 0.5s;
+}
+.nav ul li:hover::after{
+    width: 100%;
+}
+.nav ul li:active::after{
+    width: 100%;
+}
+.logo{
+    width: 120px;
+    cursor:pointer;
+}
+.nav ul{
+    color: #fff;
+    padding: 20px;
+}
+.nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin:0px 30px;
+    
+    position: relative;
+    font-size: 20px;
+    font-family: 'Times New Roman';
+}
+.nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s ease-in-out ;
+}
+.nav ul li a:hover{
+    color: #ff7200;
+}
+#gym{
+    color: #ff7200;  
+} 
+#gym::before{
+    content:'';
+    height: 3px;
+    width: 100%;
+    background: #ff7200;
+    position: absolute;
+    left: 0;
+    transform: translate(-50% -50%);
+    bottom: -5px;
+    transition: 0.5s;
+}
+.home{
+    height: 100vh;
+    background:linear-gradient(rgba(0,0,0,.5)50%,rgba(0,0,0,.8)), url(img/front.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    margin-top:-5px ;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+
+.home h1{
+    font-size: 6rem;
+    color:#fff;
+    text-align: center;
+    text-shadow: 0 .3rem .5rem #000;
+    padding:0 1rem;
+    text-transform: uppercase;
+    transition: .4s ease-in-out;
+}
+.home h1:hover{
+    color:#ff7200;
+}
+
+.home .btn{
+    padding: 20px;
+    font-size: 20px;
+    color: #ff7200;
+    box-shadow: 0 .3rem .5rem #000;
+    text-transform: uppercase;
+    border-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    width: 200px;
+    transition: 0.4s ease;
+    scroll-behavior: smooth;
+}
+
+.home .btn:hover{
+    color: white;
+    background-color: #ff7200;
+}
+.about .row{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 5rem;
+}
+
+.about .row .image{
+    flex: 1 1 30rem;
+    padding:2rem;
+}
+
+.about .row .image img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.about .row .content{
+    flex: 1 1 40rem;
+    padding:2rem;
+}
+
+.about .row .content h3{
+    color:#ff7200;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.about .row .content p{
+    color:#fff;
+    font-size: 1.7rem;
+    padding:1rem 0;
+    font-family: sans-serif;
+}
+
+.service{
+    margin-top: 100px;
+    height: 70vh;
+    text-align: center;
+}
+.service h1{
+    color: #fff;
+    font-size:35px;
+    text-transform: capitalize;
+    text-shadow: 3px 2px 2px #000;
+    transition: .4s ease;
+}
+.service h1:hover{
+    color: #ff7200;
+    font-size: 37px;
+}
+.box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service .box-container .box{
+    height:23rem;
+    width:35rem;
+    margin:1rem;
+    border-radius: 20px;
+    border: 3px solid #ff7200;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.service .box-container .box img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+}
+
+.service .box-container .box .info{
+    height:98%;
+    width:98%;
+    position: absolute;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%) scale(0);
+    background:linear-gradient(transparent, rgba(0,0,0,0.9));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    transition: .5s ease-in;
+    transform-origin: right;
+}
+
+.service .box-container .box:hover .info{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.service .box-container .box .info h3{
+    font-size: 2.5rem;
+    color:#ff7200;
+    text-transform: capitalize;
+}
+
+.service .box-container .box .info p{
+    font-size: 1.2rem;
+    color:#fff;
+    padding:1rem 2rem;
+}
+
+.trainer{
+    height: 80vh;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.trainer h1{
+    color: #fff;
+    font-size:35px;
+    text-transform: capitalize;
+    text-shadow: 3px 2px 2px #000;
+    transition: .4s ease;
+}
+.trainer h1:hover{
+    color: #ff7200;
+    font-size: 37px;
+}
+
+.trainer .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.trainer .box-container .box{
+    height:40rem;
+    margin:1.5rem 1rem;
+    width:27rem;
+    border:.5rem solid #ff7200;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 .3rem .5rem #000;
+}
+
+.trainer .box-container .box img{
+    height:100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.trainer .box-container .box .info{
+    background:#fff;
+    border-top:.5rem solid #ff7200;
+    position: absolute;
+    bottom: 0; left: 0;
+    font-size: 2rem;
+    width:100%;
+    padding:1rem 0;
+    text-transform: capitalize;
+}
+.trainer .box-container .box .share ul{
+  width:100%;
+  height: 50%;
+  align-items: center;
+  font-size: 35px;
+  text-transform: capitalize;
+  text-align: center;
+}
+.trainer .box-container .box .share li{
+    list-style: none;
+  text-align: center;
+  font-size: 20px;
+  color:#fff;
+}
+
+.trainer .box-container .box .share{
+    height:75%;
+    width:100%;
+    position: absolute;
+    top: 0%; left:0%;
+    transform: translate(-50%, -50%) scale(0);
+    background: rgba(0,0,0,.5);
+    display: flex;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.trainer .box-container .box:hover .share{
+    transform: scale(1)
+}
+
+.plan{
+    height: 100vh;
+    text-align: center;
+    background:#eee;
+}
+.plan h1{
+    color: #ff7200;
+    font-size: 35px;
+    text-transform: capitalize;
+    padding-top:20px ;
+ 
+    transition: .4s ease;
+}
+.plan h1:hover{
+    color: #000;
+    font-size: 37px;
+}
+
+.plan .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.plan .box-container .box{
+    background:#fff;
+    margin:2rem;
+    width:30rem;
+    box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+    align-items: center;
+}
+.plan .box-container .box:hover{
+    transform: scale(1.04);
+}
+
+.plan .box-container .box .title{
+    font-size: 2.5rem;
+    background:#ff7200;
+    color:#fff;
+    text-transform: capitalize;
+    padding:1rem 0;
+}
+.plan .box-container .box .price{
+    font-size: 4rem;
+    color:#ff7200;
+    padding-top:1rem;
+}
+
+.plan .box-container .box .price span{
+    font-size: 2rem;
+}
+
+.plan .box-container .box ul{
+    margin:2rem 6rem;
+    list-style: none;
+    text-align: center;
+
+}
+
+.plan .box-container .box ul li{
+    text-align: left;
+    padding:.5rem 0;
+    font-size: 1.8rem;
+    color:#000;
+    text-transform: capitalize;
+}
+
+.register{
+    margin-top: -2rem;
+    height: 100vh;
+    text-align: center;
+    background:#000;
+    padding-bottom: 3rem;
+    
+}
+.register h1{
+    color:#ff7200;
+    padding: 20px;
+}
+.register form{
+    width:75%;
+    margin:0 auto;
+}
+.register form .inputBox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.register form .inputBox input, textarea{
+    height:4rem;
+    width:49%;
+    background:#111;
+    color:#fff;
+    padding:0 1rem;
+    margin:1rem 0;
+    font-size: 2rem;
+    border:none;
+}
+
+.register form .inputBox input:focus, textarea:focus{
+    background:#222;
+}
+.register form textarea{
+    height:20rem;
+    resize: vertical;
+    padding:1rem;
+    width:100%;
+}
+.register form .btn{
+    height: 40px;
+    width: 150px;
+    color: #000;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: sans-serif;
+    transition: .4s ease-in-out;
+}
+.register form .btn:hover{
+    background:#ff7200;
+    color: #fff;
+}
+.footer{
+    background:linear-gradient(to bottom, rgba(0,0,0,0.7),rgba(0,0,0,1));
+    height: 300px;
+    
+}
+.footer .table {
+   
+    margin-left: 300px;
+    padding: 10px;
+}
+.footer .table tr {
+    margin-left: 40px;
+}
+.footer .table tr td{
+    font-size: 17px;
+    font-family: sans-serif;
+    margin: 20px;
+    padding: 20px;
+}
+.footer h3{
+    
+    margin:0 60px;
+}
+.footer a{
+    color: #ff7200;
+    text-decoration: none;
+    width: 100px;
+    transition: 0.4s ease-in-out;
+    border-radius: 30px;
+}
+.footer .table a:hover{
+    border: 2px solid #ff7200;
+    border-radius: 30px;
+    padding: 5px 20px;
+    color: #fff;
+    background: #ff7200;   
+}
+.footer p{
+    color: #ff7200;
+    font-size: medium;
+    text-align: right;
+    margin-right: 20px;
+    
+
+}
+.icons{
+    margin-left: 550px;
+    align-items: center;
+    justify-content: center;
+
+}
+.icons img{
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
