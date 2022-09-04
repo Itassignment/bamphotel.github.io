@@ -13,6 +13,7 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed ;
     padding: 0;
+    height:100%;
     font-size: small;
     display: flex;
     flex-direction: column;
