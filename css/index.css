@@ -4,7 +4,8 @@
     margin:0px;
     padding: 0%;
 }
-
+html{
+	height:100%;
 body{
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.5)50%,rgb(0,0,0,0.5)),url(../img/front1.jpg);
     background-position: center;
@@ -13,6 +14,8 @@ body{
     background-attachment: fixed ;
     padding: 0;
     font-size: small;
+    display: flex;
+    flex-direction: column;
     -webkit-appearance:none ;
 }
 .nav{
@@ -212,6 +215,7 @@ h2{
 .footer{
     background:linear-gradient(to bottom, rgba(0,0,0,0.7),rgba(0,0,0,1));
     height: 250px;
+    margin-top: auto;
 }
 .footer .table {
     margin-left: 300px;
