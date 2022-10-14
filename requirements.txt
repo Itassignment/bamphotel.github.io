@@ -6,6 +6,10 @@ optional-django
 python-dotenv
 python-env
 requests
+sqlparse
+asgiref
+psycopg2-binary
+
 Werkzeug
 gunicorn
 whitenoise
