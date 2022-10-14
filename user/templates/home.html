@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% load static %}
+{% block content %} 
+<style type="text/css" media="all">
+body{
+  padding-top: 10%;
+}
+.msg{
+  margin-top: -2%;
+}
+  .contain{
+    width:90%;
+    margin:10% 5%;
+    padding: 2%;
+    border-radius: 12px;
+background: linear-gradient(145deg, #cacaca, #f0f0f0);
+box-shadow:  16px 16px 32px #707070,
+             -16px -16px 32px #ffffff,
+            inset 16px 16px 32px #727272,
+            inset -16px -16px 32px #ffffff;
+            animation: k 5s infinite;
+    
+  }
+  img{
+    width:100%;
+    height: 300px;
+    border-radius: 10px;
+  }
+  @keyframes k {
+    from{
+      margin:10% 5%;
+    }
+    50%{
+       margin: 12% 5%;
+    }
+    100%{
+      margin:10%, 5%;
+    }
+  }
+  .form-control{
+    box-shadow:  16px 16px 32px #707070,
+             -16px -16px 32px #ffffff;
+  }
+ 
+  h1 {
+    width: 100%;
+    margin-top: 5%;
+    text-align: center;
+  }
+  h4 {
+    width: auto;
+  }
+  p{
+    
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .table{
+    padding: 7%;
+    border-radius: 10px;
+  }
+  .pass{
+    border:4px solid black
+    border-radius: 10px;
+    filter: blur(3px);
+  }
+  @media(max-width:600px){
+    img{
+    width:90%;
+    height: 200px;
+    border-radius: 10px;
+  }
+   h4, p{
+      font-size: 13px;
+  }
+  table{
+    font-size: 6px;
+  }
+  }
+   .row{
+    padding: 0%
+    margin:5%;
+    border-radius: 10px;
+    position: relative;
+  }
+  .p-4 .btn{
+    position: absolute;
+    top:8%;
+    right: 5%;
+  }
+@media(max-width:600px)
+{
+  .p-4 .btn{
+    position: absolute;
+    top:86%;
+    right: 5%;
+  }
+}
+.overflow{
+  overflow-x:scroll ;
+  overflow-snap-type:x mandatory;
+}
+</style>
+<div class="contain cont">
+<table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Username</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Password</th>
+      <th scope="col">is_active</th>
+      <th scope="col">is_staff</th>
+      <th scope="col">is_auth</th>
+      
+    </tr>
+  </thead>
+  {% for users in users %}
+  <tbody>
+    <tr>
+      <th scope="row">{{users.id}}</th>
+      <td>{{users.username}}</td>
+      <td>{{users.email}}</td>
+      <td>{{users.phone}}</td>
+      <td class="pass">{{users.password}}</td>
+      <td>{{users.is_active}}</td>
+      <td>{{users.is_staff}}</td>
+      <td>{{users.is_authenticated}}</td>
+      
+    </tr>
+  </tbody>
+  {% endfor %}
+</table>
+</div>
+{% for blog in blog %}
+<div class="row contain g-0 bg-light position-relative">
+  <div class="col-md-6 mb-md-0 p-md-4">
+    <img src="{{path}}{{blog.fname}}" class="w-100" alt="{{blog.fname}}">
+  </div>
+  <div class="col-md-6 p-4 ps-md-0">
+   <h4>published date: {{ blog.pub_date }}</h4>
+    <p class="overflow">{{blog.headline }}</p>
+    <h3>{{path}}{{blog.fname}}</h3>
+    <br><br><br>
+{% if use %}
+    <a href="delete/{{ blog.id }}"><button class="btn btn-primary">delete</button></a>
+    {% else %}
+    {% endif %}
+  </div>
+</div>
+{% endfor %}
+{% endblock content %}

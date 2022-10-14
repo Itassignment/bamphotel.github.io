@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}signup{% endblock title %}
+{% block content %}
+<style type="text/css" media="all">
+  .container{
+    position: absolute;
+    top:30%;
+    left:15%;
+    transform: translate (-50%, -50%);
+    padding: 7% 10% 10% 10%;
+    border-radius: 52px;
+background: linear-gradient(145deg, #cacaca, #f0f0f0);
+box-shadow:  16px 16px 32px #707070,
+             -16px -16px 32px #ffffff,
+            inset 16px 16px 32px #727272,
+            inset -16px -16px 32px #ffffff;
+    
+  }
+.
+  .form-control{
+    box-shadow:  16px 16px 32px #707070,
+             -16px -16px 32px #ffffff;
+  }
+  h1 {
+    width: 100%;
+    text-align: center;
+  }
+</style>
+{{% if messages %}
+<ul class="container-fluid msg">
+    {% for message in messages %}
+    <h5 {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</h5>
+    {% endfor %}
+</ul>
+{% endif %}
+<div class="container">
+  <h1>Log-in</h1>
+  <form class="row g-3" method="POST">
+    {% csrf_token %}
+    <div class="col-10">
+    <label for="inputNane4" class="form-label">Username</label>
+    <input type="text" class="form-control" id="inputName4" name="username">
+  </div>
+  <div class="col-11">
+    <label for="inputPassword4" class="form-label">Password</label>
+    <input type="password" class="form-control" id="inputPassword4" name="password">
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </div>
+</form>
+{% endblock content %}
